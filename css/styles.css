@@ -239,7 +239,7 @@ menu:hover {
 	letter-spacing: 0.03em;
 	color: var(--main-text-color);
 	padding: 6px 25px;
-	transition: color 1000ms, background-color 500ms;
+	transition: color 1000ms, background-color 500ms, box-shadow 500ms;
 }
 .buttons:hover,
 .buttons:focus {
