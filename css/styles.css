@@ -661,12 +661,9 @@ menu:hover {
 	pointer-events: none;
 	visibility: hidden;
 	opacity: 0;
-	transform: translateX(-50%) translateY(-50%);
 }
 .modal {
 	position: fixed;
-	transition-property: width, height;
-	transition-duration: 2s, 2s;
 	width: 528px;
 	height: 581px;
 
@@ -679,10 +676,6 @@ menu:hover {
 	border-radius: 4px;
 }
 
-.modal .is-hidden {
-	width: calc(528 / 4) px;
-	height: calc(581 / 4) px;
-}
 .modal-close-div {
 	position: absolute;
 	right: 8px;
@@ -708,7 +701,7 @@ menu:hover {
 	height: 100%;
 	z-index: 1;
 	background-color: rgba(0, 0, 0, 0.6);
-	transition-property: opacity, visibility, scale;
+	transition-property: opacity, visibility;
 	transition-duration: 2s, 2s;
 }
 .backdrop .is-hidden {
