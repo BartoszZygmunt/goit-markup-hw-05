@@ -661,7 +661,7 @@ menu:hover {
 	pointer-events: none;
 	visibility: hidden;
 	opacity: 0;
-	transform: translateX(-50%) translateY(-50%) scale(0);
+	transform: translateX(-50%) translateY(-50%);
 }
 .modal {
 	position: fixed;
