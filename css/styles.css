@@ -116,8 +116,7 @@ header nav ul {
 	line-height: 1.1738;
 	font-weight: 700;
 	color: var(--logo-color-text);
-	transition-property: color;
-	transition-duration: 500ms;
+	transition-property: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-margin {
 	margin-left: 93px;
@@ -127,7 +126,7 @@ header nav ul {
 }
 .logo_second_word_footer {
 	color: rgba(255, 255, 255, 1);
-	transition: color 500ms;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo_second_word_footer:hover {
 	color: var(--accent-color);
@@ -139,8 +138,7 @@ header nav ul {
 	font-weight: 500;
 	color: var(--main-text-color);
 	position: relative;
-	transition-property: color;
-	transition-duration: 500ms;
+	transition-property: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current {
@@ -167,8 +165,7 @@ header nav ul {
 	color: var(--owner-text-color);
 	display: flex;
 	align-items: center;
-	transition-property: color;
-	transition-duration: 500ms;
+	transition-property: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address_top_tel {
 	font-weight: 500;
@@ -178,8 +175,7 @@ header nav ul {
 	color: var(--owner-text-color);
 	display: flex;
 	align-items: center;
-	transition-property: color;
-	transition-duration: 500ms;
+	transition-property: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-layout {
@@ -202,8 +198,7 @@ header nav ul {
 	text-align: center;
 	margin: 0 auto;
 	padding: 10px 42px;
-	transition-property: color, font-size;
-	transition-duration: 500ms;
+	transition-property: color 250ms cubic-bezier(0.4, 0, 0.2, 1), font-size 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button_page1:hover {
 	color: #000;
@@ -239,7 +234,8 @@ menu:hover {
 	letter-spacing: 0.03em;
 	color: var(--main-text-color);
 	padding: 6px 25px;
-	transition: color 1000ms, background-color 500ms, box-shadow 500ms;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .buttons:hover,
 .buttons:focus {
@@ -313,7 +309,7 @@ menu:hover {
 	font-weight: 400;
 	line-height: 1.71;
 	color: #fff;
-	transition: color 500ms;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-background {
@@ -325,7 +321,7 @@ menu:hover {
 	color: rgba(255, 255, 255, 0.6);
 	line-height: 1.71;
 	font-weight: 400;
-	transition: color 500ms;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .light_background {
 	background-color: var(--background-section);
@@ -412,7 +408,7 @@ menu:hover {
 }
 .images-layout li a {
 	display: block;
-	transition: box-shadow 1000ms;
+	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .images-layout li a:hover,
@@ -472,8 +468,7 @@ menu:hover {
 	fill: currentColor;
 	width: 20px;
 	height: 20px;
-	transition: fill;
-	transition-duration: 2000ms;
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icons-socials:hover,
 .icons-socials:focus {
@@ -498,7 +493,7 @@ menu:hover {
 	padding: 12px;
 	border-radius: 50%;
 	color: var(--icon-color);
-	transition: background-color 1000ms, color 1000ms;
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ul-icons-socials > li > a:hover,
@@ -549,7 +544,7 @@ menu:hover {
 	width: 170px;
 	height: 92px;
 	border-radius: 4px;
-	transition: color 1000ms;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ul-clients > li > a:hover,
@@ -601,4 +596,104 @@ menu:hover {
 	text-transform: uppercase;
 	color: #ffffff;
 	margin-bottom: 20px;
+}
+
+/*karta wyjeżdżająca od dołu*/
+.portfolio-blue-div {
+	position: absolute;
+	width: 100%;
+	height: 294px;
+	top: 0;
+	left: 0;
+	background: rgba(33, 150, 243, 0.9);
+	transform: translatey(100%);
+	transition: transform 250ms ease;
+}
+
+.text-in-blue-div {
+	margin: 63px 24px 91px 24px;
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 156%;
+	letter-spacing: 0.03em;
+	color: #ffffff;
+}
+
+.images-layout li a:hover .portfolio-blue-div,
+.images-layout li a:focus .portfolio-blue-div {
+	transform: translatey(0);
+}
+
+.portfolio-div-father {
+	position: relative;
+	overflow: hidden;
+}
+
+.what-we-do-father {
+	position: relative;
+}
+
+.what-we-do-div {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 70px;
+	background: rgba(47, 48, 58, 0.8);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.what-we-do-text {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+.is-hidden {
+	pointer-events: none;
+	visibility: hidden;
+	opacity: 0;
+	transform: translateX(-50%) translateY(-50%) scale(0);
+}
+.modal {
+	position: fixed;
+	width: 528px;
+	height: 581px;
+
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+
+	background: #ffffff;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+}
+.modal::backdrop {
+	background-color: rgba(255, 0, 0, 0.5);
+	position: fixed;
+}
+
+.modal-close-div {
+	position: absolute;
+	right: 8px;
+	top: 8px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #ffffff;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.modal-close-icon {
+	fill: currentColor;
 }
